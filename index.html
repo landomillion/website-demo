@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResilientEdge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Welcome Page -->
+        <div id="welcomePage" class="page">
+            <header>
+                <h1>Welcome to ResilientEdge</h1>
+                <button id="settingsButton">Settings</button>
+            </header>
+            <main>
+                <section>
+                    <h2>Enter Your Company Details</h2>
+                    <label for="companyName">Company Name:</label>
+                    <input type="text" id="companyName" placeholder="Type your company name">
+                    
+                    <label for="industry">Industry:</label>
+                    <input type="text" id="industry" placeholder="Type your industry">
+                    
+                    <label for="description">Brief Description:</label>
+                    <textarea id="description" placeholder="Describe your company"></textarea>
+                    
+                    <button id="runButton">Run</button>
+                </section>
+            </main>
+        </div>
+
+        <!-- Input Data Stage -->
+        <div id="inputDataPage" class="page hidden">
+            <header>
+                <h1>Input Data Stage</h1>
+            </header>
+            <main>
+                <section>
+                    <h2>Input Supply Chain Configuration</h2>
+                    <textarea id="supplyChainConfig" placeholder="Type supply chain configuration"></textarea>
+                    <button id="generateDisruptions">Generate Disruptions</button>
+                </section>
+            </main>
+        </div>
+
+        <!-- Disruption Probability Page -->
+        <div id="disruptionProbabilityPage" class="page hidden">
+            <header>
+                <h1>Disruption Probability</h1>
+            </header>
+            <main>
+                <section>
+                    <h2>Probability of Each Disruption</h2>
+                    <div id="disruptionResults">Results based on configuration</div>
+                    <button id="nextAnalyzeImpact">Next</button>
+                </section>
+            </main>
+        </div>
+
+        <!-- Analyze Impact Page -->
+        <div id="analyzeImpactPage" class="page hidden">
+            <header>
+                <h1>Stress test</h1>
+            </header>
+            <main>
+                <section>
+                    <h2>Impact Analysis</h2>
+                    <div>Analyze disruptions at each node</div>
+                    <button id="getScoreButton">Get Score</button>
+                </section>
+            </main>
+        </div>
+
+        <!-- Solutions Page -->
+        <div id="solutionsPage" class="page hidden">
+            <header>
+                <h1>Solutions</h1>
+            </header>
+            <main>
+                <button id="nextCostBenefit">Next</button>
+            </main>
+        </div>
+
+        <!-- Cost Benefit Page -->
+        <div id="costBenefitPage" class="page hidden">
+            <header>
+                <h1>Cost Benefit Trade-off</h1>
+            </header>
+            <main>
+                <button id="nextWeakestLinks">Analyze Weakest Links</button>
+            </main>
+        </div>
+
+        <!-- Analyze Weakest Links -->
+        <div id="weakestLinksPage" class="page hidden">
+            <header>
+                <h1>Weakest Links</h1>
+            </header>
+            <main>
+                <button id="nextSolutions">Solutions to Improve</button>
+            </main>
+        </div>
+
+        <!-- Scan Environment -->
+        <div id="scanEnvironmentPage" class="page hidden">
+            <header>
+                <h1>Scan Environment</h1>
+            </header>
+            <main>
+                <button id="endTestButton">End</button>
+            </main>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+// script.js
+document.addEventListener('DOMContentLoaded', () => {
+    const pages = document.querySelectorAll('.page');
+    const settingsButton = document.getElementById('settingsButton');
+    const runButton = document.getElementById('runButton');
+    const generateDisruptions = document.getElementById('generateDisruptions');
+    const nextstrestest = document.getElementById('nextAnalyzeImpact');
+    const getScoreButton = document.getElementById('getScoreButton');
+    const nextCostBenefit = document.getElementById('nextCostBenefit');
+    const nextWeakestLinks = document.getElementById('nextWeakestLinks');
+    const nextSolutions = document.getElementById('nextSolutions');
+    const endTestButton = document.getElementById('endTestButton');
+
+    let currentPage = 0;
+
+    const showPage = (pageIndex) => {
+        pages.forEach((page, index) => {
+            page.classList.toggle('hidden', index !== pageIndex);
+        });
+        currentPage = pageIndex;
+    };
+
+    runButton.addEventListener('click', () => showPage(1));
+    generateDisruptions.addEventListener('click', () => showPage(2));
+    nextAnalyzeImpact.addEventListener('click', () => showPage(3));
+    getScoreButton.addEventListener('click', () => showPage(4));
+    nextCostBenefit.addEventListener('click', () => showPage(5));
+    nextWeakestLinks.addEventListener('click', () => showPage(6));
+    nextSolutions.addEventListener('click', () => showPage(7));
+    endTestButton.addEventListener('click', () => {
+        alert('Thank you! Test complete.');
+        showPage(0);
+    });
+});
